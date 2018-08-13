@@ -1,7 +1,7 @@
 import Person from "../models/Person.js";
 import Planet from "../models/Planet.js";
-import Vehicle from "../models/Vehicle.js";
 import Starship from "../models/Starship.js";
+import Vehicle from "../models/Vehicle.js";
 
 
 export default class SwapiService {
