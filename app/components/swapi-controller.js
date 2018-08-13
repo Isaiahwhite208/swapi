@@ -1,5 +1,4 @@
 import SwapiService from "./swapi-service.js";
-import Vehicle from "../models/Vehicle.js";
 
 // Private
 
