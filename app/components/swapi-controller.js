@@ -39,7 +39,7 @@ export default class SwapiController {
 
   getStarships() {
     console.log("HELLO FROM CONTROLLER")
-    swapiService.getStarships("{}", drawError)
+    swapiService.getStarships(console.log, drawError)
   }
 
 
