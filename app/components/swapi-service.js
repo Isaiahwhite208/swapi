@@ -8,7 +8,6 @@ let people = {}
 export default class SwapiService {
 
   getPeople(draw, drawError) {
-    console.log("HELLO FROM People")
     fetch('https://swapi.co/api/people')
       .then(res => res.json())
       .then(res => {
@@ -22,7 +21,6 @@ export default class SwapiService {
       .catch(drawError)
   }
   getPeople2(draw, drawError) {
-    console.log("HELLO FROM People")
     fetch('https://swapi.co/api/people/?page=2')
       .then(res => res.json())
       .then(res => {
@@ -36,7 +34,6 @@ export default class SwapiService {
       .catch(drawError)
   }
   getPlanet(draw, drawError) {
-    console.log("HELLO FROM Planet")
     fetch('https://swapi.co/api/planets')
       .then(res => res.json())
       .then(res => {
@@ -48,7 +45,6 @@ export default class SwapiService {
       .catch(drawError)
   }
   getStarships(draw, drawError) {
-    console.log("HELLO FROM Ships")
     fetch('https://swapi.co/api/starships')
       .then(res => res.json())
       .then(res => {
@@ -60,7 +56,6 @@ export default class SwapiService {
       .catch(drawError)
   }
   getVehicle(draw, drawError) {
-    console.log("HELLO FROM Vehicle")
     fetch('https://swapi.co/api/vehicles')
       .then(res => res.json())
       .then(res => {

@@ -9,18 +9,12 @@ function draw(data) {
   console.log(data)
   app.innerHTML = `
   <div id="error"></div>
-  <button onclick="app.controllers.swapi.getPeople()">
-  Get People
-  </button>
-  <button onclick="app.controllers.swapi.getPlanet()">
-  Get Planets
-  </button>
-  <button onclick="app.controllers.swapi.getStarships()">
-  Get Starships
-  </button>
-  <button onclick="app.controllers.swapi.getVehicle()">
-  Get Vehicles
-  <div id="people"></div>`
+  <button onclick="app.controllers.swapi.getPeople()"> Get People </button>
+  <button onclick="app.controllers.swapi.getPeople2()"> Get People2 </button>
+  <button onclick="app.controllers.swapi.getPlanet()"> Get Planets </button>
+  <button onclick="app.controllers.swapi.getStarships()"> Get Starships </button>
+  <button onclick="app.controllers.swapi.getVehicle()"> Get Vehicles <div id="people">
+  </div>`
 }
 
 function drawPeople(people) {
@@ -78,7 +72,6 @@ export default class SwapiController {
   }
 
   getPeople() {
-    console.log("HELLO FROM CONTROLLER")
     swapiService.getPeople(console.log, drawError)
   }
   getPlanet() {
