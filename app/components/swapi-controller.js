@@ -12,34 +12,15 @@ function draw(data) {
   <button onclick="app.controllers.swapi.getPeople()">
   Get People
   </button>
-  <div id="people"></div>`
-}
-function draw(data) {
-  console.log(data)
-  app.innerHTML = `
-  <div id="error"></div>
   <button onclick="app.controllers.swapi.getPlanet()">
   Get Planets
   </button>
-  <div id="planets"></div>`
-}
-function draw(data) {
-  console.log(data)
-  app.innerHTML = `
-  <div id="error"></div>
   <button onclick="app.controllers.swapi.getStarships()">
   Get Starships
   </button>
-  <div id="starships"></div>`
-}
-function draw(data) {
-  console.log(data)
-  app.innerHTML = `
-  <div id="error"></div>
   <button onclick="app.controllers.swapi.getVehicle()">
   Get Vehicles
-  </button>
-  <div id="vehicles"></div>`
+  <div id="people"></div>`
 }
 
 function drawPeople(people) {
@@ -101,15 +82,12 @@ export default class SwapiController {
     swapiService.getPeople(console.log, drawError)
   }
   getPlanet() {
-    console.log("HELLO FROM CONTROLLER")
     swapiService.getPlanet(console.log, drawError)
   }
   getStarships() {
-    console.log("HELLO FROM CONTROLLER")
     swapiService.getStarships(console.log, drawError)
   }
   getVehicle() {
-    console.log("HELLO FROM CONTROLLER")
     swapiService.getVehicle(console.log, drawError)
   }
 
