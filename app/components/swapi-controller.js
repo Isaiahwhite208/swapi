@@ -8,26 +8,34 @@ let app = document.getElementById('app')
 
 function draw(data) {
   console.log(data)
-  app.innerHTML =
-    `
+  app.innerHTML = `
   <div id="error"></div>
   <button onclick="app.controllers.swapi.getPeople()">
   Get People
   </button>
-  <div id="people"></div>`;
-  `
+  <div id="people"></div>`
+}
+function draw(data) {
+  console.log(data)
+  app.innerHTML = `
   <div id="error"></div>
   <button onclick="app.controllers.swapi.getPlanet()">
   Get Planets
   </button>
-  <div id="planets"></div>`;
-  `
+  <div id="planets"></div>`
+}
+function draw(data) {
+  console.log(data)
+  app.innerHTML = `
   <div id="error"></div>
   <button onclick="app.controllers.swapi.getStarships()">
   Get Starships
   </button>
-  <div id="starships"></div>`;
-  `
+  <div id="starships"></div>`
+}
+function draw(data) {
+  console.log(data)
+  app.innerHTML = `
   <div id="error"></div>
   <button onclick="app.controllers.swapi.getVehicle()">
   Get Vehicles
@@ -35,57 +43,47 @@ function draw(data) {
   <div id="vehicles"></div>`
 }
 
-function drawPeople(data) {
+function drawPeople(people) {
   let peopleElem = document.getElementById('people')
   let template = ''
-  data.results.forEach(people => {
+  people.results.forEach(people => {
     template += `<div>
     ${people.name}
     </div>`
   })
-
   peopleElem.innerHTML = template
-
 }
-
-function drawPlanets(data) {
+function drawPlanets(planets) {
   let planetsElem = document.getElementById('planets')
   let template = ''
-  data.results.forEach(planet => {
+  planets.results.forEach(planet => {
     template += `<div>
     ${planet.name}
     </div>`
   })
-
   planetsElem.innerHTML = template
-
 }
-
-function drawVehicles(data) {
-  let vehiclesElem = document.getElementById('vehicles')
-  let template = ''
-  data.results.forEach(vehicle => {
-    template += `<div>
-    ${vehicle.name}
-    </div>`
-  })
-
-  vehiclesElem.innerHTML = template
-
-}
-
-function drawStarships(data) {
+function drawStarships(starships) {
   let starshipsElem = document.getElementById('starships')
   let template = ''
-  data.results.forEach(starship => {
+  starships.results.forEach(starship => {
     template += `<div>
     ${starship.name}
     </div>`
   })
-
   starshipsElem.innerHTML = template
-
 }
+function drawVehicles(vehicles) {
+  let vehiclesElem = document.getElementById('vehicles')
+  let template = ''
+  vehicles.results.forEach(vehicle => {
+    template += `<div>
+    ${vehicle.name}
+    </div>`
+  })
+  vehiclesElem.innerHTML = template
+}
+
 
 function drawError(error) {
   console.log(error)
